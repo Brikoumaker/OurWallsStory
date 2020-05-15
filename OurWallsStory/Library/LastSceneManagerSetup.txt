@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/DevScene.unity
+=======
+- path: Assets/Scenes/AudioScene.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
