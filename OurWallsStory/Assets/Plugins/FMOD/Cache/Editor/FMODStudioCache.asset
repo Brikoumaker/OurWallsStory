@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8854900343677091742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SBK_SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Desktop/SBK_SFX.bank
+  SubDir: 
+  lastModified: 637251647437608712
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-8664771882088842289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637251647437229723
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1403392484974396626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,7 +53,7 @@ MonoBehaviour:
   lastModified: 637249795322245206
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1256705772273484612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,7 +69,7 @@ MonoBehaviour:
   Path: event:/OWS_Test/TestMarion
   guid: 9443cda620e02d47aea727e21953c65b
   Banks:
-  - {fileID: -670038323281520647}
+  - {fileID: -8854900343677091742}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -58,7 +94,7 @@ MonoBehaviour:
   lastModified: 637249795322175392
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-670038323281520647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +112,7 @@ MonoBehaviour:
   lastModified: 637249795339893382
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,18 +127,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 4911099321223895817}
-  - {fileID: -935167226838606187}
-  - {fileID: -1403392484974396626}
-  - {fileID: -670038323281520647}
+  - {fileID: -8664771882088842289}
+  - {fileID: 6146064502337987422}
+  - {fileID: -8854900343677091742}
   EditorEvents:
   - {fileID: -1256705772273484612}
   - {fileID: 4950698939220341280}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -935167226838606187}
+  - {fileID: -8664771882088842289}
   StringsBanks:
   - {fileID: 4911099321223895817}
-  stringsBankWriteTime: 637249795322215290
+  stringsBankWriteTime: 637251647437229723
   cacheVersion: 3
 --- !u!114 &4911099321223895817
 MonoBehaviour:
@@ -118,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODAssets/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637249795322215290
+  lastModified: 637251647437229723
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -141,7 +177,7 @@ MonoBehaviour:
   Path: event:/OWS_Test/Test
   guid: bb6293a7aa431b4396ec27f889cee7db
   Banks:
-  - {fileID: -670038323281520647}
+  - {fileID: -8854900343677091742}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -149,3 +185,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2730
+--- !u!114 &6146064502337987422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SBK_Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Desktop/SBK_Music.bank
+  SubDir: 
+  lastModified: 637251647437229723
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
