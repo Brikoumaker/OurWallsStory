@@ -10,6 +10,7 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
     public GameObject House;
     public GameObject Curtain1;
     public GameObject Curtain2;
+    public bool AnimationFinished;
 
     private Animator SubScene_Animator;
     private Animator Keys_Animator;
@@ -29,6 +30,11 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (AnimationFinished == true)
+        {
+            House_Animator.SetInteger("SubScene", 2);
+            AnimationFinished = false;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
