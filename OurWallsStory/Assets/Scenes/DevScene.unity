@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 363728044}
   - component: {fileID: 363728045}
   - component: {fileID: 363728046}
+  - component: {fileID: 363728047}
   m_Layer: 0
   m_Name: 1-1-1-LIVING-ROOM
   m_TagString: Untagged
@@ -428,7 +429,7 @@ Transform:
   - {fileID: 1996907405}
   - {fileID: 1040228207}
   m_Father: {fileID: 1215429958}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &363728045
 Animator:
@@ -465,6 +466,18 @@ MonoBehaviour:
   Keys: {fileID: 707949944}
   Lamp: {fileID: 332535737}
   House: {fileID: 1215429957}
+--- !u!114 &363728047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363728043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &368206885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5709599810857446635, guid: 585033d0b4f60ce4fa2ad6cffe1d6546,
@@ -5318,6 +5331,7 @@ GameObject:
   - component: {fileID: 707949946}
   - component: {fileID: 707949947}
   - component: {fileID: 707949948}
+  - component: {fileID: 707949949}
   m_Layer: 0
   m_Name: Keys
   m_TagString: Untagged
@@ -5435,6 +5449,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &707949949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707949944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789630685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,6 +5651,60 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 7}
   m_EdgeRadius: 0
+--- !u!1 &852091887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852091888}
+  - component: {fileID: 852091889}
+  m_Layer: 0
+  m_Name: AmbientSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852091888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852091887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1215429958}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852091889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852091887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/AMB/Amb_Entrance_Empty
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &910507389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5694,7 +5774,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 7b170c8df218d044c9faccc1ba9dcf1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -5749,6 +5829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215429958}
   - component: {fileID: 1215429959}
+  - component: {fileID: 1215429960}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -5769,6 +5850,7 @@ Transform:
   m_Children:
   - {fileID: 109876246}
   - {fileID: 1733176112}
+  - {fileID: 852091888}
   - {fileID: 363728044}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5792,6 +5874,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1215429960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215429957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225561224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6129,6 +6223,8 @@ GameObject:
   - component: {fileID: 1733176112}
   - component: {fileID: 1733176111}
   - component: {fileID: 1733176110}
+  - component: {fileID: 1733176113}
+  - component: {fileID: 1733176114}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6143,7 +6239,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733176109}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1733176111
 Camera:
   m_ObjectHideFlags: 0
@@ -6201,6 +6297,38 @@ Transform:
   m_Father: {fileID: 1215429958}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733176113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733176109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
+--- !u!114 &1733176114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733176109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - SBK_SFX
+  - SBK_Music
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1893421139
 GameObject:
   m_ObjectHideFlags: 0
