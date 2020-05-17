@@ -8,10 +8,14 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
     public GameObject Keys;
     public GameObject Lamp;
     public GameObject House;
+    public GameObject Curtain1;
+    public GameObject Curtain2;
 
     private Animator SubScene_Animator;
     private Animator Keys_Animator;
     private Animator House_Animator;
+
+    private bool KeysOnce;
 
 
     // Start is called before the first frame update
@@ -32,6 +36,8 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
             Collider2D CurtainsColl = Curtains.GetComponent<Collider2D>();
             Collider2D KeysColl = Keys.GetComponent<Collider2D>();
             Collider2D LampColl = Lamp.GetComponent<Collider2D>();
+            Collider2D Curtain1Coll = Curtain1.GetComponent<Collider2D>();
+            Collider2D Curtain2Coll = Curtain2.GetComponent<Collider2D>();
 
             if (CurtainsColl.OverlapPoint(MousePos))
             {
@@ -42,11 +48,21 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
             if (KeysColl.OverlapPoint(MousePos))
             {
                 Keys_Animator.SetBool("Keys_Activated", true);
+                if (KeysOnce == true)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Keys_Touch", MousePos);
+                }
+                KeysOnce = true;
             }
 
             if (LampColl.OverlapPoint(MousePos))
             {
                 SubScene_Animator.SetBool("Lamp_Activated", true);
+            }
+
+            if ((Curtain1Coll.OverlapPoint(MousePos)) || (Curtain2Coll.OverlapPoint(MousePos)))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Curtains_Touch", MousePos);
             }
 
         }
