@@ -38,6 +38,12 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_LightBulb_On", MousePos);
     }
+
+    void WaterInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_WaterFaucet_On", MousePos);
+    }
+
     void DoorOpen()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_FrontDoor_Open", MousePos);
