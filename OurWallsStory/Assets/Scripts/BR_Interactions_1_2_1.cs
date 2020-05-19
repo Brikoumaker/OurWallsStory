@@ -39,6 +39,7 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -39,6 +39,13 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (AnimationFinished == true)
+        {
+            House_Animator.SetInteger("SubScene", 1);
+            House_Animator.SetInteger("Scene", 2);
+            AnimationFinished = false;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

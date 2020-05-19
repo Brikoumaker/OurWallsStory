@@ -44,6 +44,21 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_WaterFaucet_On", MousePos);
     }
 
+    void CardboardInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Cardboard_Transform", MousePos);
+    }
+
+    void LampShadeInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Lampshade_Place", MousePos);
+    }
+
+    void PlantInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Plant_Place", MousePos);
+    }
+
     void DoorOpen()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_FrontDoor_Open", MousePos);
