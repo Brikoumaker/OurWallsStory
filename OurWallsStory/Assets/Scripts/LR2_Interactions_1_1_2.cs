@@ -12,6 +12,10 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
     public GameObject Shoes;
     public GameObject Hanger;
     public GameObject House;
+    public GameObject Stairs;
+    public GameObject Curtain1;
+    public GameObject Curtain2;
+    public GameObject Keys;
     public bool AnimationFinished;
 
     private Animator LampA_Animator;
@@ -49,6 +53,7 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = Camera.main.transform.position;
             Collider2D LampAColl = LampA.GetComponent<Collider2D>();
             Collider2D LampBColl = LampB.GetComponent<Collider2D>();
             Collider2D TVColl = TV.GetComponent<Collider2D>();
@@ -56,6 +61,10 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
             Collider2D TableColl = Table.GetComponent<Collider2D>();
             Collider2D ShoesColl = Shoes.GetComponent<Collider2D>();
             Collider2D HangerColl = Hanger.GetComponent<Collider2D>();
+            Collider2D KeysColl = Keys.GetComponent<Collider2D>();
+            Collider2D Curtain1Coll = Curtain1.GetComponent<Collider2D>();
+            Collider2D Curtain2Coll = Curtain2.GetComponent<Collider2D>();
+            Collider2D StairsColl = Stairs.GetComponent<Collider2D>();
 
             if (LampAColl.OverlapPoint(MousePos))
             {
@@ -90,6 +99,21 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
             if (HangerColl.OverlapPoint(MousePos))
             {
                 Hanger_Animator.SetBool("Hanger_Activated", true);
+            }
+
+            if (KeysColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Keys_Touch", CamPos);
+            }
+
+            if ((Curtain1Coll.OverlapPoint(MousePos)) || (Curtain2Coll.OverlapPoint(MousePos)))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Curtains_Touch", CamPos);
+            }
+
+            if (StairsColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Stairs_Touch", CamPos);
             }
 
         }

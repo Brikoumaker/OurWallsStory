@@ -10,6 +10,7 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
     public GameObject House;
     public GameObject Curtain1;
     public GameObject Curtain2;
+    public GameObject Stairs;
     public bool AnimationFinished;
 
     private Animator SubScene_Animator;
@@ -39,11 +40,13 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = Camera.main.transform.position;
             Collider2D CurtainsColl = Curtains.GetComponent<Collider2D>();
             Collider2D KeysColl = Keys.GetComponent<Collider2D>();
             Collider2D LampColl = Lamp.GetComponent<Collider2D>();
             Collider2D Curtain1Coll = Curtain1.GetComponent<Collider2D>();
             Collider2D Curtain2Coll = Curtain2.GetComponent<Collider2D>();
+            Collider2D StairsColl = Stairs.GetComponent<Collider2D>();
 
             if (CurtainsColl.OverlapPoint(MousePos))
             {
@@ -56,7 +59,7 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
                 Keys_Animator.SetBool("Keys_Activated", true);
                 if (KeysOnce == true)
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Keys_Touch", MousePos);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Keys_Touch", CamPos);
                 }
                 KeysOnce = true;
             }
@@ -68,7 +71,12 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
 
             if ((Curtain1Coll.OverlapPoint(MousePos)) || (Curtain2Coll.OverlapPoint(MousePos)))
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Curtains_Touch", MousePos);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Curtains_Touch", CamPos);
+            }
+
+            if (StairsColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Stairs_Touch", CamPos);
             }
 
         }
