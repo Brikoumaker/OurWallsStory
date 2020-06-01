@@ -51,6 +51,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 74
@@ -102,7 +104,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: ec4017eaefa7afc9a506342c5597a135
+      Hash: d9ca8eabe50d627bf8430a4515d20f77
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LR_Interactions_1_1_1
@@ -294,7 +296,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: f005b72068b685f3deba357335e92a00
+      Hash: 8ca58666a35d167e73d880bdb4bb871d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LR2_Interactions_1_1_2
@@ -673,4 +675,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/Test APK/BuildAndroid.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.11/OWS-0.11.apk

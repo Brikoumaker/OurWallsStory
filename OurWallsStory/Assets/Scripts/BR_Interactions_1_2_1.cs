@@ -40,6 +40,11 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     void Update()
     {
 
+        if (AnimationFinished == true)
+        {
+            House_Animator.SetInteger("SubScene", 2);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

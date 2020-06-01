@@ -51,6 +51,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 74
@@ -64,7 +66,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11316}
+      Script: {instanceID: 11314}
     - Class: 114
       Script: {instanceID: 11862}
     - Class: 114
@@ -72,13 +74,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12850}
+      Script: {instanceID: 12852}
     - Class: 114
-      Script: {instanceID: 13412}
+      Script: {instanceID: 13414}
     - Class: 114
-      Script: {instanceID: 13530}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 14560}
+      Script: {instanceID: 14562}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -102,13 +104,13 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: ec4017eaefa7afc9a506342c5597a135
+      Hash: d9ca8eabe50d627bf8430a4515d20f77
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LR_Interactions_1_1_1
   - hash:
       serializedVersion: 2
-      Hash: 3c08375166df118bd1801438fc36b92f
+      Hash: c42672c997f8be6b1aa86a927ebea785
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
@@ -132,6 +134,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -144,7 +152,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 72712369a7c681ad84fc255a5ec0b333
+      Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
@@ -168,7 +176,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 8e0313c6f5e2ce35991fec2d64f8eaab
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
@@ -270,7 +278,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 4e9333594897a1fb8b136ad2eae996c7
+      Hash: d941ab6dd93d37ffdf2277f2ea2375a0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
@@ -288,7 +296,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: f005b72068b685f3deba357335e92a00
+      Hash: 8ca58666a35d167e73d880bdb4bb871d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LR2_Interactions_1_1_2
@@ -420,7 +428,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: feb9a5a121d15fa3654d4e50a5233045
+      Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
@@ -504,7 +512,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 3b760e6526e13f7504f59e210145899a
+      Hash: 8001a5f7502aab37e42206da015e6914
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
@@ -552,7 +560,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: df434544c9f7b33d1cc7e635b180d279
+      Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
@@ -667,4 +675,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/DevScene.unity
-  playerPath: "C:/Users/morea/OneDrive/Documents/BuildPaum\xE9e/OurWallsStory.exe"
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.11/Our Walls' Story.exe
