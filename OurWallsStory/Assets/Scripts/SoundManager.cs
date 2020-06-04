@@ -71,6 +71,16 @@ public class SoundManager : MonoBehaviour
 
     void Miouzik()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Musique/Musique_Acte1", CamPos);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Musique/Musique_Acte1_Court", CamPos);
+    }
+
+    void BigWave()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_BigWave", CamPos);
+    }
+
+    void Flash()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Photo_Flash", CamPos);
     }
 }
