@@ -83,4 +83,54 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Photo_Flash", CamPos);
     }
+
+    void BathInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_SpongeScrub", CamPos);
+    }
+
+    void DustInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_DustCleaner", CamPos);
+    }
+
+    void PaintInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_PaintBucket", CamPos);
+    }
+
+    void MagnetInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Magnet", CamPos);
+    }
+
+    void DishesInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Dishes", CamPos);
+    }
+
+    void PortraitInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_ScribblePainting", CamPos);
+    }
+
+    void Splash()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_BathSplash", CamPos);
+    }
+
+    void CandleInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_CandleLit", CamPos);
+    }
+
+    void LampOffInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Lamp_Off", CamPos);
+    }
+
+    void TVInteraction()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_TV_On", CamPos);
+    }
 }
