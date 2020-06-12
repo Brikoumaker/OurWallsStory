@@ -7,11 +7,13 @@ public class KI_Interactions_1_3_1 : MonoBehaviour
     public GameObject Magnet;
     public GameObject Dishes;
     public GameObject House;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator Magnet_Animator;
     private Animator Dishes_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,11 @@ public class KI_Interactions_1_3_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
+
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D MagnetColl = Magnet.GetComponent<Collider2D>();

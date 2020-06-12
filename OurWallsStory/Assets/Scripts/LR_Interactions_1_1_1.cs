@@ -11,11 +11,13 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
     public GameObject Curtain1;
     public GameObject Curtain2;
     public GameObject Stairs;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator SubScene_Animator;
     private Animator Keys_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
     private bool KeysOnce;
 
@@ -26,18 +28,22 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
         SubScene_Animator = GetComponent<Animator>();
         Keys_Animator = Keys.GetComponent<Animator>();
         House_Animator = House.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
         if (AnimationFinished == true)
         {
             House_Animator.SetInteger("SubScene", 2);
             AnimationFinished = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 CamPos = Camera.main.transform.position;

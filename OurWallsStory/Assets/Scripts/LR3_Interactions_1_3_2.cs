@@ -10,12 +10,14 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
     public GameObject TVLight;
     public GameObject DarkRoom;
     public GameObject House;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator LampNight_Animator;
     private Animator Candle_Animator;
     private Animator TVLight_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +33,14 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
 
     {
 
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
         if (AnimationFinished == true)
         {  
             House_Animator.SetInteger("SubScene", 3);
         }
-    
-        if (Input.GetMouseButtonDown(0))
+
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D LampNightColl = LampNight.GetComponent<Collider2D>();

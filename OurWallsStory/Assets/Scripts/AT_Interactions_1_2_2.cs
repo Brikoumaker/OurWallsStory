@@ -10,6 +10,7 @@ public class AT_Interactions_1_2_2 : MonoBehaviour
     public GameObject Portrait;
     public GameObject Mannikin;
     public GameObject House;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator Web1_Animator;
@@ -17,6 +18,7 @@ public class AT_Interactions_1_2_2 : MonoBehaviour
     private Animator Portrait_Animator;
     private Animator Mannikin_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
 
     // Start is called before the first frame update
@@ -32,13 +34,16 @@ public class AT_Interactions_1_2_2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
 
         if (AnimationFinished == true)
         {
             House_Animator.SetInteger("Scene", 3);   
             House_Animator.SetInteger("SubScene", 1);
         }
-        if (Input.GetMouseButtonDown(0))
+
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D Web1Coll = Web1.GetComponent<Collider2D>();

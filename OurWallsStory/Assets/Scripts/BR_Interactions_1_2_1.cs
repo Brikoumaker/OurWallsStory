@@ -13,6 +13,7 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     public GameObject Machine;
     public GameObject Wall;
     public GameObject House;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator Bath_Animator;
@@ -22,6 +23,7 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     private Animator Mirror_Animator;
     private Animator Machine_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
 
     // Start is called before the first frame update
@@ -40,12 +42,14 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     void Update()
     {
 
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
         if (AnimationFinished == true)
         {
             House_Animator.SetInteger("SubScene", 2);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D BathColl = Bath.GetComponent<Collider2D>();

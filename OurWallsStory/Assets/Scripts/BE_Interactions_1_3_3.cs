@@ -9,12 +9,14 @@ public class BE_Interactions_1_3_3 : MonoBehaviour
     public GameObject BedLamp2;
     public GameObject Window;
     public GameObject House;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator BedLamp1_Animator;
     private Animator BedLamp2_Animator;
     private Animator Window_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,11 @@ public class BE_Interactions_1_3_3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
+
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D BedLamp1Coll = BedLamp1.GetComponent<Collider2D>();
