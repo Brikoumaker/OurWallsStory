@@ -9,6 +9,8 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
     public GameObject Candle;
     public GameObject TVLight;
     public GameObject DarkRoom;
+    public GameObject Stairs;
+    public GameObject Curtain;
     public GameObject House;
     public GameObject Canvas;
     public bool AnimationFinished;
@@ -43,9 +45,12 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = Camera.main.transform.position;
             Collider2D LampNightColl = LampNight.GetComponent<Collider2D>();
             Collider2D CandleColl = Candle.GetComponent<Collider2D>();
             Collider2D TVLightColl = TVLight.GetComponent<Collider2D>();
+            Collider2D CurtainColl = Curtain.GetComponent<Collider2D>();
+            Collider2D StairsColl = Stairs.GetComponent<Collider2D>();
 
             if (LampNightColl.OverlapPoint(MousePos))
             {
@@ -62,6 +67,16 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
             {
                 TVLight_Animator.SetBool("TVLight_Activated", true);
                 
+            }
+
+            if (CurtainColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Curtains_Touch", CamPos);
+            }
+
+            if (StairsColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Stairs_Touch", CamPos);
             }
         }
     }

@@ -8,6 +8,7 @@ public class BE_Interactions_1_3_3 : MonoBehaviour
     public GameObject BedLamp1;
     public GameObject BedLamp2;
     public GameObject Window;
+    public GameObject Mirror;
     public GameObject House;
     public GameObject Canvas;
     public bool AnimationFinished;
@@ -37,9 +38,11 @@ public class BE_Interactions_1_3_3 : MonoBehaviour
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = Camera.main.transform.position;
             Collider2D BedLamp1Coll = BedLamp1.GetComponent<Collider2D>();
             Collider2D BedLamp2Coll = BedLamp2.GetComponent<Collider2D>();
             Collider2D WindowColl = Window.GetComponent<Collider2D>();
+            Collider2D MirrorColl = Mirror.GetComponent<Collider2D>();
 
             if (BedLamp1Coll.OverlapPoint(MousePos))
             {
@@ -55,6 +58,11 @@ public class BE_Interactions_1_3_3 : MonoBehaviour
             {
                 Window_Animator.SetBool("Window_Activated", true);
 
+            }
+
+            if (MirrorColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Glass", CamPos);
             }
         }
     }

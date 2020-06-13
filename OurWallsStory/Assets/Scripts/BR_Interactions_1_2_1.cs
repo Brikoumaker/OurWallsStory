@@ -12,6 +12,7 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     public GameObject Mirror;
     public GameObject Machine;
     public GameObject Wall;
+    public GameObject Window;
     public GameObject House;
     public GameObject Canvas;
     public bool AnimationFinished;
@@ -52,12 +53,14 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = Camera.main.transform.position;
             Collider2D BathColl = Bath.GetComponent<Collider2D>();
             Collider2D ShowerColl = Shower.GetComponent<Collider2D>();
             Collider2D PlantColl = Plant.GetComponent<Collider2D>();
             Collider2D PaintColl = Paint.GetComponent<Collider2D>();
             Collider2D MirrorColl = Mirror.GetComponent<Collider2D>();
             Collider2D MachineColl = Machine.GetComponent<Collider2D>();
+            Collider2D WindowColl = Window.GetComponent<Collider2D>();
 
             if (BathColl.OverlapPoint(MousePos))
             {
@@ -88,6 +91,11 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
             if (MachineColl.OverlapPoint(MousePos))
             {
                 Machine_Animator.SetBool("Machine_Activated", true);
+            }
+
+            if (WindowColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Glass", CamPos);
             }
 
 
