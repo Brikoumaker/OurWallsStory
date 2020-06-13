@@ -12,7 +12,9 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     public GameObject Mirror;
     public GameObject Machine;
     public GameObject Wall;
+    public GameObject Window;
     public GameObject House;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator Bath_Animator;
@@ -22,6 +24,7 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     private Animator Mirror_Animator;
     private Animator Machine_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
 
     // Start is called before the first frame update
@@ -40,20 +43,24 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
     void Update()
     {
 
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
         if (AnimationFinished == true)
         {
             House_Animator.SetInteger("SubScene", 2);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = Camera.main.transform.position;
             Collider2D BathColl = Bath.GetComponent<Collider2D>();
             Collider2D ShowerColl = Shower.GetComponent<Collider2D>();
             Collider2D PlantColl = Plant.GetComponent<Collider2D>();
             Collider2D PaintColl = Paint.GetComponent<Collider2D>();
             Collider2D MirrorColl = Mirror.GetComponent<Collider2D>();
             Collider2D MachineColl = Machine.GetComponent<Collider2D>();
+            Collider2D WindowColl = Window.GetComponent<Collider2D>();
 
             if (BathColl.OverlapPoint(MousePos))
             {
@@ -84,6 +91,11 @@ public class BR_Interactions_1_2_1 : MonoBehaviour
             if (MachineColl.OverlapPoint(MousePos))
             {
                 Machine_Animator.SetBool("Machine_Activated", true);
+            }
+
+            if (WindowColl.OverlapPoint(MousePos))
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Glass", CamPos);
             }
 
 

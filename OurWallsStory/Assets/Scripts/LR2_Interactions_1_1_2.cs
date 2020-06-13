@@ -16,6 +16,7 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
     public GameObject Curtain1;
     public GameObject Curtain2;
     public GameObject Keys;
+    public GameObject Canvas;
     public bool AnimationFinished;
 
     private Animator LampA_Animator;
@@ -26,6 +27,7 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
     private Animator Shoes_Animator;
     private Animator Hanger_Animator;
     private Animator House_Animator;
+    private bool PauseActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -44,13 +46,15 @@ public class LR2_Interactions_1_1_2 : MonoBehaviour
     void Update()
     {
 
+        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+
         if (AnimationFinished == true)
         {
             House_Animator.SetInteger("SubScene", 1);
             House_Animator.SetInteger("Scene", 2);
             AnimationFinished = false;
         }
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 CamPos = Camera.main.transform.position;
