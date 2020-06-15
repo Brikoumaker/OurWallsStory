@@ -34,6 +34,14 @@ public class BE_Interactions_1_3_3 : MonoBehaviour
 
         PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
 
+        if (AnimationFinished == true)
+        {
+            House_Animator.SetInteger("Act", 2);
+            House_Animator.SetInteger("Scene", 1);
+            House_Animator.SetInteger("SubScene", 1);
+            AnimationFinished = false;
+        }
+
 
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
