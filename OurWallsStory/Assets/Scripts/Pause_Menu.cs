@@ -13,6 +13,7 @@ public class Pause_Menu : MonoBehaviour
     public GameObject Label2;
     public GameObject MessageQuit;
     public GameObject MessageRestart;
+    public GameObject MusicAmbienteManager;
 
 
     public Image TapeUp;
@@ -93,6 +94,7 @@ public class Pause_Menu : MonoBehaviour
         if ((State == 5) && (AnimationFinished == true))
         {
             Time.timeScale = 1;
+            MusicAmbienteManager.GetComponent<MusikAmbientManager>().StopAllPlayerEvents();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
@@ -104,6 +106,7 @@ public class Pause_Menu : MonoBehaviour
         PauseActivated = true;
         UI_Update();
         PauseMenu.SetActive(true);
+        MusicAmbienteManager.GetComponent<MusikAmbientManager>().Pause();
         State = 1;
         PauseMenu_Animator.SetInteger("PauseMenu_State", 1);
     }
@@ -111,6 +114,7 @@ public class Pause_Menu : MonoBehaviour
     void ResumeGame ()
     {
         Time.timeScale = 1;
+        MusicAmbienteManager.GetComponent<MusikAmbientManager>().Resume();
         PauseActivated = false;
         PauseMenu.SetActive(false);
     }
@@ -241,6 +245,14 @@ public class Pause_Menu : MonoBehaviour
             LightColor = new Color32(255, 255, 207, 255);
             SecondaryColor = new Color32(142, 23, 127, 255);
             SceneNumber = 7;
+        }
+
+        if ((Act == 2) && (Scene == 1) && (SubScene == 1))
+        {
+            DarkColor = new Color32(36, 80, 235, 255);
+            LightColor = new Color32(254, 224, 232, 255);
+            SecondaryColor = new Color32(247, 8, 92, 255);
+            SceneNumber = 9;
         }
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-
+    public GameObject MusicAmbienteManager;
     Vector3 CamPos;
 
     // Start is called before the first frame update
@@ -41,7 +41,8 @@ public class SoundManager : MonoBehaviour
 
     void WaterInteraction()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_WaterFaucet_On", CamPos);
+        MusicAmbienteManager.GetComponent<MusikAmbientManager>().Play_Water = true;
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_WaterFaucet_On", CamPos);
     }
 
     void CardboardInteraction()
