@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
 
-public class BB_Interaction_2_1_1 : MonoBehaviour
+public class KL_Interaction_2_1_2 : MonoBehaviour
 {
     public GameObject Interaction;
     public GameObject House;
@@ -22,7 +21,6 @@ public class BB_Interaction_2_1_1 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-
     {
         PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
         Vector3 CamPos = Camera.main.transform.position;
@@ -36,7 +34,8 @@ public class BB_Interaction_2_1_1 : MonoBehaviour
             {
                 Interaction_Animator.SetBool("Holding", true);
             }
-        } else
+        }
+        else
         {
             Interaction_Animator.SetBool("Holding", false);
         }

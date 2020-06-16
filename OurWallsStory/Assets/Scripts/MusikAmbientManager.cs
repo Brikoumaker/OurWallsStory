@@ -9,6 +9,8 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Stop_Ambiente1;
     public bool Play_Water;
     public bool Stop_Water;
+    public bool Play_Music_Act2_1;
+    public bool Play_Music_Act2_2;
 
     FMOD.Studio.EventInstance Music_Act1;
     FMOD.Studio.EventInstance Ambiente1;
@@ -22,7 +24,7 @@ public class MusikAmbientManager : MonoBehaviour
         Music_Act2 = FMODUnity.RuntimeManager.CreateInstance("event:/Musique/Musique_Acte2");
         Ambiente1 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_Entrance_Empty");
         Water = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Action/SFX_WaterFaucet_On");
-        //Music_Act1.setParameterByName("MusiqueActe2", 2);
+        //
     }
 
     // Update is called once per frame
@@ -56,6 +58,19 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Water.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Stop_Water = false;
+        }
+
+        if (Play_Music_Act2_1 == true)
+        {
+            Music_Act2.setParameterByName("MusiqueActe2", 1);
+            Music_Act2.start();
+            Play_Music_Act2_1 = false;
+        }
+
+        if (Play_Music_Act2_2 == true)
+        {
+            Music_Act2.setParameterByName("MusiqueActe2", 2);
+            Play_Music_Act2_2 = false;
         }
     }
 
