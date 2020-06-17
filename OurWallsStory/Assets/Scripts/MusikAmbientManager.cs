@@ -11,6 +11,8 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Stop_Water;
     public bool Play_Music_Act2_1;
     public bool Play_Music_Act2_2;
+    public bool Play_Music_Act2_3;
+    public float Basse;
 
     FMOD.Studio.EventInstance Music_Act1;
     FMOD.Studio.EventInstance Ambiente1;
@@ -72,6 +74,17 @@ public class MusikAmbientManager : MonoBehaviour
             Music_Act2.setParameterByName("MusiqueActe2", 2);
             Play_Music_Act2_2 = false;
         }
+
+        if (Play_Music_Act2_3 == true)
+        {
+            Music_Act2.setParameterByName("MusiqueActe2", 3);
+            Play_Music_Act2_3 = false;
+        }
+
+        Music_Act2.setParameterByName("Basse Melody", Basse);
+
+
+
     }
 
     public void Pause()

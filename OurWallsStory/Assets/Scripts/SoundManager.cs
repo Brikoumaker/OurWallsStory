@@ -134,4 +134,9 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_TV_On", CamPos);
     }
+
+    void FailBasse()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Musique/Musique_BassePain", CamPos);
+    }
 }
