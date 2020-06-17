@@ -54,6 +54,8 @@ public class Pause_Menu : MonoBehaviour
     private int Scene;
     private int SubScene;
 
+    Vector3 CamPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +74,7 @@ public class Pause_Menu : MonoBehaviour
     {
 
         AnimationFinished = PauseMenu.GetComponent<PauseAnimation>().AnimationFinished;
+        Vector3 CamPos = Camera.main.transform.position;
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -123,6 +126,7 @@ public class Pause_Menu : MonoBehaviour
     {
         State = 6;
         PauseMenu_Animator.SetInteger("PauseMenu_State", 6);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Button", CamPos);
     }
 
     void ClickQuit()
@@ -134,6 +138,7 @@ public class Pause_Menu : MonoBehaviour
             Label2.SetActive(true);
             MessageQuit.SetActive(true);
             MessageRestart.SetActive(false);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Button", CamPos);
         }
         
     }
@@ -147,6 +152,7 @@ public class Pause_Menu : MonoBehaviour
             Label2.SetActive(true);
             MessageQuit.SetActive(false);
             MessageRestart.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Button", CamPos);
         }
         
     }
@@ -157,12 +163,14 @@ public class Pause_Menu : MonoBehaviour
         {
             State = 4;
             PauseMenu_Animator.SetInteger("PauseMenu_State", 4);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Button", CamPos);
         }
 
         if (State == 3)
         {
             State = 5;
             PauseMenu_Animator.SetInteger("PauseMenu_State", 5);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Button", CamPos);
         }
     }
 
@@ -173,6 +181,7 @@ public class Pause_Menu : MonoBehaviour
             Label1.SetActive(true);
             Label2.SetActive(false);
             State = 1;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Button", CamPos);
         }
         
     }

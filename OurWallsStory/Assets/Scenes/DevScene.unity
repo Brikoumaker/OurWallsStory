@@ -8857,6 +8857,7 @@ GameObject:
   - component: {fileID: 439904594}
   - component: {fileID: 439904595}
   - component: {fileID: 439904596}
+  - component: {fileID: 439904597}
   m_Layer: 5
   m_Name: PAUSE
   m_TagString: Untagged
@@ -8918,6 +8919,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationFinished: 0
+--- !u!114 &439904597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439904593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicAmbienteManager: {fileID: 0}
 --- !u!1 &457671244
 GameObject:
   m_ObjectHideFlags: 0
@@ -18893,6 +18907,7 @@ GameObject:
   - component: {fileID: 1060313948}
   - component: {fileID: 1060313949}
   - component: {fileID: 1060313950}
+  - component: {fileID: 1060313951}
   m_Layer: 0
   m_Name: Interaction 2-1-1
   m_TagString: Untagged
@@ -18971,6 +18986,19 @@ MonoBehaviour:
   Interaction_Basse: 0
   MusicAmbienteManager: {fileID: 0}
   BasseUpdate: 0
+--- !u!114 &1060313951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060313946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicAmbienteManager: {fileID: 0}
 --- !u!1001 &1076501123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19451,6 +19479,7 @@ GameObject:
   - component: {fileID: 1135469866}
   - component: {fileID: 1135469867}
   - component: {fileID: 1135469868}
+  - component: {fileID: 1135469869}
   m_Layer: 0
   m_Name: Interaction 2-1-2
   m_TagString: Untagged
@@ -19529,6 +19558,19 @@ MonoBehaviour:
   Interaction_Basse: 0
   MusicAmbienteManager: {fileID: 0}
   BasseUpdate: 0
+--- !u!114 &1135469869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135469864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicAmbienteManager: {fileID: 0}
 --- !u!1 &1174575055
 GameObject:
   m_ObjectHideFlags: 0
@@ -21156,6 +21198,7 @@ GameObject:
   - component: {fileID: 1339833979}
   - component: {fileID: 1339833980}
   - component: {fileID: 1339833981}
+  - component: {fileID: 1339833982}
   m_Layer: 0
   m_Name: Flora_Vaccum
   m_TagString: Untagged
@@ -21247,6 +21290,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1339833982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339833978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicAmbienteManager: {fileID: 0}
 --- !u!1 &1355157314
 GameObject:
   m_ObjectHideFlags: 0
@@ -22176,6 +22232,11 @@ MonoBehaviour:
   Play_Music_Act2_1: 0
   Play_Music_Act2_2: 0
   Play_Music_Act2_3: 0
+  Play_Ambiente2: 0
+  Stop_Ambiente2: 0
+  Ambiente211: 0
+  Ambiente212: 0
+  Ambiente221: 0
   Basse: 0
 --- !u!1 &1504340681
 GameObject:
@@ -27579,6 +27640,7 @@ GameObject:
   - component: {fileID: 1587189130}
   - component: {fileID: 1587189132}
   - component: {fileID: 1587189133}
+  - component: {fileID: 1587189134}
   m_Layer: 5
   m_Name: START_MESSAGE
   m_TagString: Untagged
@@ -27676,6 +27738,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimationFinished: 0
   SubScene1_1_1: {fileID: 363728043}
+--- !u!114 &1587189134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587189128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37132b0a8a5a3894b8f133870ff55f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicAmbienteManager: {fileID: 0}
 --- !u!1 &1606045300
 GameObject:
   m_ObjectHideFlags: 0
