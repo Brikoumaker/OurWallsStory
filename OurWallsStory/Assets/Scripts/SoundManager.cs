@@ -184,5 +184,10 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Clothes_Fold", CamPos);
     }
+    void SofaPrep()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sofa_Prep", CamPos);
+    }
+
 
 }

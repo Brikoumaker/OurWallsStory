@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusikAmbientManager : MonoBehaviour
 {
     public bool Play_Music_Act1;
+    public bool Play_Music_Act3_1;
     public bool Play_Ambiente1;
     public bool Stop_Ambiente1;
     public bool Play_Water;
@@ -13,11 +14,14 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Play_Music_Act2_2;
     public bool Play_Music_Act2_3;
     public bool Play_Music_Act2_4;
+    public bool Stop_Music_Act2;
     public bool Play_Ambiente2;
     public bool Stop_Ambiente2;
     public bool Ambiente211;
     public bool Ambiente212;
     public bool Ambiente221;
+    public bool Ambiente222;
+    public bool Ambiente311;
     public bool Play_Vaccum;
     public bool Stop_Vaccum;
     public bool Play_Kettle;
@@ -32,6 +36,7 @@ public class MusikAmbientManager : MonoBehaviour
     FMOD.Studio.EventInstance Ambiente5;
     FMOD.Studio.EventInstance Ambiente6;
     FMOD.Studio.EventInstance Music_Act2;
+    FMOD.Studio.EventInstance Music_Act3;
     FMOD.Studio.EventInstance Water;
     FMOD.Studio.EventInstance Vaccum;
     FMOD.Studio.EventInstance Kettle;
@@ -41,6 +46,7 @@ public class MusikAmbientManager : MonoBehaviour
     {
         Music_Act1 = FMODUnity.RuntimeManager.CreateInstance("event:/Musique/Musique_Acte1_Normal");
         Music_Act2 = FMODUnity.RuntimeManager.CreateInstance("event:/Musique/Musique_Acte2");
+        Music_Act3 = FMODUnity.RuntimeManager.CreateInstance("event:/Musique/Musique_Acte3");
         Ambiente1 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_Entrance_Empty");
         Ambiente2 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_Night_FullHouse");
         Ambiente3 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_BedRoom_BathRoom");
@@ -123,6 +129,19 @@ public class MusikAmbientManager : MonoBehaviour
             Play_Music_Act2_4 = false;
         }
 
+        if (Stop_Music_Act2 == true)
+        {
+            Music_Act2.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Stop_Music_Act2 = false;
+        }
+
+        if (Play_Music_Act3_1 == true)
+        {
+            Music_Act3.setParameterByName("MusiqueActe3", 0);
+            Music_Act3.start();
+            Play_Music_Act3_1 = false;
+        }
+
         if (Ambiente211 == true)
         {
             Ambiente3.start();
@@ -143,6 +162,22 @@ public class MusikAmbientManager : MonoBehaviour
             Ambiente5.start();
             Ambiente4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Ambiente221 = false;
+        }
+
+        if (Ambiente222 == true)
+        {
+            Ambiente6.start();
+            Ambiente6.setParameterByName("LivingRoom", 2);
+            Ambiente5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Ambiente222 = false;
+        }
+
+        if (Ambiente311 == true)
+        {
+            
+            Ambiente6.setParameterByName("LivingRoom", 0);
+            
+            Ambiente311 = false;
         }
 
         if (Play_Vaccum == true)
@@ -179,6 +214,7 @@ public class MusikAmbientManager : MonoBehaviour
     {
         Music_Act1.setPaused(true);
         Music_Act2.setPaused(true);
+        Music_Act3.setPaused(true);
         Ambiente1.setPaused(true);
         Ambiente2.setPaused(true);
         Ambiente3.setPaused(true);
@@ -194,6 +230,7 @@ public class MusikAmbientManager : MonoBehaviour
     {
         Music_Act1.setPaused(false);
         Music_Act2.setPaused(false);
+        Music_Act3.setPaused(false);
         Ambiente1.setPaused(false);
         Ambiente2.setPaused(false);
         Ambiente3.setPaused(false);
@@ -209,6 +246,7 @@ public class MusikAmbientManager : MonoBehaviour
     {
         Music_Act1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Music_Act2.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        Music_Act3.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Ambiente1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Ambiente2.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Ambiente3.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
