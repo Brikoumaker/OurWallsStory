@@ -6,6 +6,7 @@ public class MusikAmbientManager : MonoBehaviour
 {
     public bool Play_Music_Act1;
     public bool Play_Music_Act3_1;
+    public bool Play_Music_Act3_2;
     public bool Play_Ambiente1;
     public bool Stop_Ambiente1;
     public bool Play_Water;
@@ -26,6 +27,7 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Stop_Vaccum;
     public bool Play_Kettle;
     public bool Stop_Kettle;
+    public bool ShutAllAmbientes;
     public float Basse;
 
     FMOD.Studio.EventInstance Music_Act1;
@@ -142,6 +144,12 @@ public class MusikAmbientManager : MonoBehaviour
             Play_Music_Act3_1 = false;
         }
 
+        if (Play_Music_Act3_2 == true)
+        {
+            Music_Act3.setParameterByName("MusiqueActe3", 1);
+            Play_Music_Act3_2 = false;
+        }
+
         if (Ambiente211 == true)
         {
             Ambiente3.start();
@@ -202,6 +210,17 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Kettle.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Stop_Kettle = false;
+        }
+
+        if (ShutAllAmbientes == true)
+        {
+            Ambiente1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Ambiente2.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Ambiente3.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Ambiente4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Ambiente5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Ambiente6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            ShutAllAmbientes = false;
         }
 
         Music_Act2.setParameterByName("Basse Melody", Basse);

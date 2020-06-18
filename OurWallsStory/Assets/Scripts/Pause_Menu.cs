@@ -53,6 +53,7 @@ public class Pause_Menu : MonoBehaviour
     private int Act;
     private int Scene;
     private int SubScene;
+    private int Act2SubScene;
 
     Vector3 CamPos;
 
@@ -191,6 +192,7 @@ public class Pause_Menu : MonoBehaviour
         Act = House_Animator.GetInteger("Act");
         Scene = House_Animator.GetInteger("Scene");
         SubScene = House_Animator.GetInteger("SubScene");
+        Act2SubScene = House.GetComponent<Act2Scenes>().SubScene;
 
         if ((Act == 1) && (Scene == 1) && (SubScene == 0))
         {
@@ -281,10 +283,31 @@ public class Pause_Menu : MonoBehaviour
 
         if ((Act == 2) && (Scene == 2) && (SubScene == 2))
         {
-            DarkColor = new Color32(205, 0, 23, 255);
-            LightColor = new Color32(250, 220, 220, 255);
-            SecondaryColor = new Color32(250, 170, 30, 255);
-            SceneNumber = 12;
+            
+            if (Act2SubScene == 0)
+            {
+                DarkColor = new Color32(205, 0, 23, 255);
+                LightColor = new Color32(250, 220, 220, 255);
+                SecondaryColor = new Color32(250, 170, 30, 255);
+                SceneNumber = 12;
+            }
+
+            if (Act2SubScene == 1)
+            {
+                DarkColor = new Color32(50, 85, 140, 255);
+                LightColor = new Color32(200, 200, 220, 255);
+                SecondaryColor = new Color32(255, 112, 138, 255);
+                SceneNumber = 13;
+            }
+
+            if (Act2SubScene == 2)
+            {
+                DarkColor = new Color32(190, 140, 80, 255);
+                LightColor = new Color32(250, 240, 230, 255);
+                SecondaryColor = new Color32(215, 100, 90, 255);
+                SceneNumber = 14;
+            }
+
         }
 
 

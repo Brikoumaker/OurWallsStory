@@ -189,5 +189,10 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sofa_Prep", CamPos);
     }
 
+    void DogRun()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Dog_Run", CamPos);
+    }
+
 
 }
