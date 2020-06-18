@@ -13,6 +13,7 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
     public GameObject Stairs;
     public GameObject Canvas;
     public bool AnimationFinished;
+    public bool StartGame;
 
     private Animator SubScene_Animator;
     private Animator Keys_Animator;
@@ -43,7 +44,7 @@ public class LR_Interactions_1_1_1 : MonoBehaviour
             AnimationFinished = false;
         }
 
-        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false) && (StartGame == true))
         {
             Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 CamPos = Camera.main.transform.position;

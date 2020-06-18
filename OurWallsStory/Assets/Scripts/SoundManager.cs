@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-
+    public GameObject MusicAmbienteManager;
     Vector3 CamPos;
 
     // Start is called before the first frame update
@@ -41,7 +41,8 @@ public class SoundManager : MonoBehaviour
 
     void WaterInteraction()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_WaterFaucet_On", CamPos);
+        MusicAmbienteManager.GetComponent<MusikAmbientManager>().Play_Water = true;
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_WaterFaucet_On", CamPos);
     }
 
     void CardboardInteraction()
@@ -133,4 +134,55 @@ public class SoundManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_TV_On", CamPos);
     }
+
+    void FailBasse()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Musique/Musique_BassePain", CamPos);
+    }
+
+    void UI_Pause()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Pause", CamPos);
+    }
+
+    void UI_Resume()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Continue", CamPos);
+    }
+
+    void UI_Quit()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Quit", CamPos);
+    }
+
+    void UI_Restart()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Restart", CamPos);
+    }
+
+    void UI_Tooltip()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Menu_Tooltip", CamPos);
+    }
+
+    void Hold_Act2()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sparkles_HoldLong", CamPos);
+    }
+
+    void Hold_Success()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sparkles_HoldSuccess", CamPos);
+    }
+
+    void Hold_Fail()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sparkles_HoldFail", CamPos);
+    }
+
+    void Fold()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Clothes_Fold", CamPos);
+    }
+
 }
