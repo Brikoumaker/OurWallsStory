@@ -57,7 +57,7 @@ public class SoundManager : MonoBehaviour
 
     void PlantInteraction()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Plant_Place", CamPos);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_PlantPot_Broken", CamPos);
     }
 
     void DoorOpen()
@@ -192,6 +192,11 @@ public class SoundManager : MonoBehaviour
     void DogRun()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Dog_Run", CamPos);
+    }
+
+    void Kiss()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Kiss", CamPos);
     }
 
 
