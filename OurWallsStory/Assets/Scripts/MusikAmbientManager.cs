@@ -12,6 +12,7 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Play_Music_Act2_1;
     public bool Play_Music_Act2_2;
     public bool Play_Music_Act2_3;
+    public bool Play_Music_Act2_4;
     public bool Play_Ambiente2;
     public bool Stop_Ambiente2;
     public bool Ambiente211;
@@ -114,6 +115,12 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Music_Act2.setParameterByName("MusiqueActe2", 3);
             Play_Music_Act2_3 = false;
+        }
+
+        if (Play_Music_Act2_4 == true)
+        {
+            Music_Act2.setParameterByName("MusiqueActe2", 4);
+            Play_Music_Act2_4 = false;
         }
 
         if (Ambiente211 == true)
