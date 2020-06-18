@@ -8,6 +8,9 @@ public class UnlockNextSubscene : MonoBehaviour
     public int Act;
     public int Scene;
     public int SubScene;
+    public float Interaction_Basse;
+    public GameObject MusicAmbienteManager;
+    public bool BasseUpdate;
 
     private Animator House_Animator;
 
@@ -20,8 +23,11 @@ public class UnlockNextSubscene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
 
+        if (BasseUpdate == true)
+        {
+            MusicAmbienteManager.GetComponent<MusikAmbientManager>().Basse = Interaction_Basse;
+        }
     }
 
     public void SetNext()
