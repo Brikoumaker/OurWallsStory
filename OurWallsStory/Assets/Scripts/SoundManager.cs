@@ -209,5 +209,21 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Dog_Clean", CamPos);
     }
 
+    void DogCollar()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Dog_Leash", CamPos);
+    }
+
+    void DogBark()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Dog_Bark", CamPos);
+    }
+
+    void SpongeFloor()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Sponge_Floor", CamPos);
+    }
+
+
 
 }

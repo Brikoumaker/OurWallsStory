@@ -7,6 +7,7 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Play_Music_Act1;
     public bool Play_Music_Act3_1;
     public bool Play_Music_Act3_2;
+    public bool Play_Music_Act3_3;
     public bool Play_Ambiente1;
     public bool Stop_Ambiente1;
     public bool Play_Water;
@@ -164,6 +165,12 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Music_Act3.setParameterByName("MusiqueActe3", 1);
             Play_Music_Act3_2 = false;
+        }
+
+        if (Play_Music_Act3_3 == true)
+        {
+            Music_Act3.setParameterByName("MusiqueActe3", 2);
+            Play_Music_Act3_3 = false;
         }
 
         if (Ambiente211 == true)

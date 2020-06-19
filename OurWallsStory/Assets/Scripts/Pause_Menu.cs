@@ -316,6 +316,25 @@ public class Pause_Menu : MonoBehaviour
                 SceneNumber = 15;
             }
 
+            
+
+
+        }
+
+        if ((Act == 3) && (Scene == 2) && (SubScene == 3))
+        {
+            DarkColor = new Color32(170, 190, 80, 255);
+            LightColor = new Color32(230, 250, 250, 255);
+            SecondaryColor = new Color32(200, 160, 70, 255);
+            SceneNumber = 18;
+        }
+
+        if ((Act == 4) && (Scene == 0) && (SubScene == 0))
+        {
+            DarkColor = new Color32(170, 190, 80, 255);
+            LightColor = new Color32(230, 250, 250, 255);
+            SecondaryColor = new Color32(200, 160, 70, 255);
+            SceneNumber = 19;
         }
 
 
