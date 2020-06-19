@@ -509,8 +509,54 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.9666667
+        time: 2.2333333
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2.2666667
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: Play_Vaccum
+    path: MusicAmbienteManager
+    classID: 114
+    script: {fileID: 11500000, guid: 17edf760be0bcfd428bfa5cd6a1ddbfc, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 3.8
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 3.8333333
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -529,7 +575,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: Play_Vaccum
+    attribute: Stop_TV
     path: MusicAmbienteManager
     classID: 114
     script: {fileID: 11500000, guid: 17edf760be0bcfd428bfa5cd6a1ddbfc, type: 3}
@@ -628,6 +674,13 @@ AnimationClip:
     - serializedVersion: 2
       path: 191047097
       attribute: 2310276833
+      script: {fileID: 11500000, guid: 17edf760be0bcfd428bfa5cd6a1ddbfc, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 191047097
+      attribute: 1417684639
       script: {fileID: 11500000, guid: 17edf760be0bcfd428bfa5cd6a1ddbfc, type: 3}
       typeID: 114
       customType: 0
@@ -1201,8 +1254,54 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.9666667
+        time: 2.2333333
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2.2666667
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: Play_Vaccum
+    path: MusicAmbienteManager
+    classID: 114
+    script: {fileID: 11500000, guid: 17edf760be0bcfd428bfa5cd6a1ddbfc, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 3.8
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 3.8333333
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -1221,7 +1320,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: Play_Vaccum
+    attribute: Stop_TV
     path: MusicAmbienteManager
     classID: 114
     script: {fileID: 11500000, guid: 17edf760be0bcfd428bfa5cd6a1ddbfc, type: 3}

@@ -11,6 +11,8 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Stop_Ambiente1;
     public bool Play_Water;
     public bool Stop_Water;
+    public bool Play_TV;
+    public bool Stop_TV;
     public bool Play_Music_Act2_1;
     public bool Play_Music_Act2_2;
     public bool Play_Music_Act2_3;
@@ -42,6 +44,7 @@ public class MusikAmbientManager : MonoBehaviour
     FMOD.Studio.EventInstance Water;
     FMOD.Studio.EventInstance Vaccum;
     FMOD.Studio.EventInstance Kettle;
+    FMOD.Studio.EventInstance TV;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +61,7 @@ public class MusikAmbientManager : MonoBehaviour
         Water = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Action/SFX_WaterFaucet_On");
         Vaccum = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_VacuumCleaner");
         Kettle = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_Kettle");
+        TV = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_TVMusic");
         //
     }
 
@@ -105,6 +109,18 @@ public class MusikAmbientManager : MonoBehaviour
             Water.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Stop_Water = false;
         }
+        if (Play_TV == true)
+        {
+            TV.start();
+            Play_TV = false;
+        }
+
+        if (Stop_TV == true)
+        {
+            TV.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Stop_TV = false;
+        }
+
 
         if (Play_Music_Act2_1 == true)
         {
@@ -243,6 +259,7 @@ public class MusikAmbientManager : MonoBehaviour
         Water.setPaused(true);
         Vaccum.setPaused(true);
         Kettle.setPaused(true);
+        TV.setPaused(true);
     }
 
     public void Resume()
@@ -259,6 +276,7 @@ public class MusikAmbientManager : MonoBehaviour
         Water.setPaused(false);
         Vaccum.setPaused(false);
         Kettle.setPaused(false);
+        TV.setPaused(false);
     }
 
     public void StopAllPlayerEvents()
@@ -275,5 +293,6 @@ public class MusikAmbientManager : MonoBehaviour
         Water.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Vaccum.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Kettle.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        TV.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

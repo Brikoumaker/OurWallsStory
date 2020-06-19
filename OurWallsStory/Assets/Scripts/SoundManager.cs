@@ -170,6 +170,11 @@ public class SoundManager : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sparkles_HoldLong", CamPos);
     }
 
+    void Hold_Act3()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sparkles_HoldMedium", CamPos);
+    }
+
     void Hold_Success()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Sparkles_HoldSuccess", CamPos);
@@ -197,6 +202,11 @@ public class SoundManager : MonoBehaviour
     void Kiss()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Animation/SFX_Kiss", CamPos);
+    }
+
+    void DogClean()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Action/SFX_Dog_Clean", CamPos);
     }
 
 
