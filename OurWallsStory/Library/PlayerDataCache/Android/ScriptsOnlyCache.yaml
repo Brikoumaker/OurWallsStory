@@ -16,11 +16,13 @@ ScriptsOnlyBuild:
     - Act2Scenes
     - BB_Interaction_2_1_1
     - BE_Interactions_1_3_3
+    - BR2_Interaction_3_1_2
     - BR_Interactions_1_2_1
     - KI_Interactions_1_3_1
     - KL_Interaction_2_1_2
     - LR2_Interactions_1_1_2
     - LR3_Interactions_1_3_2
+    - LR4_Interaction_3_2_3
     - LR_Interactions_1_1_1
     - LauchCredits
     - MusikAmbientManager
@@ -104,49 +106,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 11868}
+      Script: {instanceID: 11676}
     - Class: 114
-      Script: {instanceID: 11940}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11942}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 12264}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12370}
+      Script: {instanceID: 12266}
     - Class: 114
-      Script: {instanceID: 12544}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 12866}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 12868}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13140}
+      Script: {instanceID: 13116}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 13166}
     - Class: 114
-      Script: {instanceID: 13552}
+      Script: {instanceID: 13436}
     - Class: 114
-      Script: {instanceID: 13922}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 14322}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 14348}
+      Script: {instanceID: 13926}
     - Class: 114
-      Script: {instanceID: 14350}
+      Script: {instanceID: 14326}
     - Class: 114
-      Script: {instanceID: 14576}
+      Script: {instanceID: 14352}
     - Class: 114
-      Script: {instanceID: 14588}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 14660}
+      Script: {instanceID: 14580}
+    - Class: 114
+      Script: {instanceID: 14592}
+    - Class: 114
+      Script: {instanceID: 14664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -192,7 +198,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: d9ea13bc682c18dbf8ce74af4d50ca72
+      Hash: 3ff600108ca818e92ebd80448dbba9e2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MusikAmbientManager
@@ -274,6 +280,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 75d8e22f91af69cdb01b5082153dc48e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LR4_Interaction_3_2_3
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -594,6 +606,12 @@ ScriptsOnlyBuild:
     className: SoundManager
   - hash:
       serializedVersion: 2
+      Hash: 75d8e22f91af69cdb01b5082153dc48e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BR2_Interaction_3_1_2
+  - hash:
+      serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -835,4 +853,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.14/OWS-0.14.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.15/OWS-0.15.apk
