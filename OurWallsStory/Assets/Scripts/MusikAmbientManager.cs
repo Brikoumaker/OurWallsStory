@@ -46,6 +46,7 @@ public class MusikAmbientManager : MonoBehaviour
     FMOD.Studio.EventInstance Vaccum;
     FMOD.Studio.EventInstance Kettle;
     FMOD.Studio.EventInstance TV;
+    FMOD.Studio.PLAYBACK_STATE state;
 
     // Start is called before the first frame update
     void Start()
@@ -63,16 +64,24 @@ public class MusikAmbientManager : MonoBehaviour
         Vaccum = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_VacuumCleaner");
         Kettle = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_Kettle");
         TV = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_TVMusic");
+        
         //
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (Play_Music_Act1 == true)
         {
             Music_Act1.start();
-            Play_Music_Act1 = false;
+            Music_Act1.getPlaybackState(out state);
+            if (state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                Play_Music_Act1 = false;
+            }
+            
         }
 
         if (Play_Ambiente1 == true)
@@ -127,7 +136,12 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Music_Act2.setParameterByName("MusiqueActe2", 1);
             Music_Act2.start();
-            Play_Music_Act2_1 = false;
+            Music_Act2.getPlaybackState(out state);
+            if (state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                Play_Music_Act2_1 = false;
+            }
+            
         }
 
         if (Play_Music_Act2_2 == true)
@@ -158,7 +172,12 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Music_Act3.setParameterByName("MusiqueActe3", 0);
             Music_Act3.start();
-            Play_Music_Act3_1 = false;
+            Music_Act3.getPlaybackState(out state);
+            if (state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                Play_Music_Act3_1 = false;
+            }
+            
         }
 
         if (Play_Music_Act3_2 == true)
