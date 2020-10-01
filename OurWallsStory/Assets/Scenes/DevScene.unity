@@ -7345,7 +7345,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -8162,7 +8162,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -10464,7 +10464,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -18616,7 +18616,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -19743,7 +19743,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -20212,7 +20212,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -20728,7 +20728,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -20887,7 +20887,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -21095,7 +21095,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -21335,7 +21335,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
@@ -21468,7 +21468,7 @@ PrefabInstance:
     - target: {fileID: 5709599810857446633, guid: 585033d0b4f60ce4fa2ad6cffe1d6546,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5709599810857446633, guid: 585033d0b4f60ce4fa2ad6cffe1d6546,
         type: 3}
@@ -24163,7 +24163,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -25984,7 +25984,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -26281,7 +26281,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -26977,7 +26977,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -28348,7 +28348,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -28426,7 +28426,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -29210,7 +29210,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
@@ -29369,7 +29369,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -29598,7 +29598,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -34497,6 +34497,8 @@ MonoBehaviour:
   Interaction: {fileID: 204005347}
   House: {fileID: 1215429957}
   Canvas: {fileID: 1724759677}
+  Flora: {fileID: 1199896323}
+  FloraLaunch: 0
 --- !u!1001 &1566830366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34667,7 +34669,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -35232,7 +35234,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
@@ -36111,7 +36113,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
@@ -41396,7 +41398,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -41722,7 +41724,7 @@ Camera:
   m_GameObject: {fileID: 1733176109}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -41745,7 +41747,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -42247,7 +42249,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
@@ -48356,7 +48358,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -48642,7 +48644,7 @@ PrefabInstance:
     - target: {fileID: 5709599810857446633, guid: 585033d0b4f60ce4fa2ad6cffe1d6546,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5709599810857446633, guid: 585033d0b4f60ce4fa2ad6cffe1d6546,
         type: 3}
@@ -64470,7 +64472,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -70171,7 +70173,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -70370,7 +70372,7 @@ MonoBehaviour:
     m_MaxSize: 185
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2

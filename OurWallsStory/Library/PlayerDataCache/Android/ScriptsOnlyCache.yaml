@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - FMODUnity.EditorParamRef
     - FMODUnity.EventCache
     Assembly-CSharp-firstpass.dll:
+    - FMODUnity.RuntimeManager
     - FMODUnity.Settings
     - FMODUnity.StudioBankLoader
     - FMODUnity.StudioEventEmitter
@@ -17,7 +18,9 @@ ScriptsOnlyBuild:
     - BB_Interaction_2_1_1
     - BE_Interactions_1_3_3
     - BR2_Interaction_3_1_2
+    - BRD_interaction_3_2_2
     - BR_Interactions_1_2_1
+    - KID_Interaction_3_2_1
     - KI_Interactions_1_3_1
     - KL_Interaction_2_1_2
     - LR2_Interactions_1_1_2
@@ -92,67 +95,71 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11604}
+      Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 11656}
+      Script: {instanceID: 11658}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11870}
+      Script: {instanceID: 11872}
     - Class: 114
-      Script: {instanceID: 11942}
+      Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12266}
+      Script: {instanceID: 12268}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12374}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12870}
     - Class: 114
-      Script: {instanceID: 13036}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13116}
+      Script: {instanceID: 13118}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 13144}
     - Class: 114
-      Script: {instanceID: 13166}
+      Script: {instanceID: 13168}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13556}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13926}
+      Script: {instanceID: 13560}
     - Class: 114
-      Script: {instanceID: 14326}
+      Script: {instanceID: 13930}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 14330}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14356}
     - Class: 114
-      Script: {instanceID: 14580}
+      Script: {instanceID: 14358}
     - Class: 114
-      Script: {instanceID: 14592}
+      Script: {instanceID: 14502}
     - Class: 114
-      Script: {instanceID: 14664}
+      Script: {instanceID: 14586}
+    - Class: 114
+      Script: {instanceID: 14598}
+    - Class: 114
+      Script: {instanceID: 14670}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -588,6 +595,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 75d8e22f91af69cdb01b5082153dc48e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BRD_interaction_3_2_2
+  - hash:
+      serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -768,6 +781,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 75d8e22f91af69cdb01b5082153dc48e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KID_Interaction_3_2_1
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -853,4 +872,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.15/OWS-0.15.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.16/OWS-0.16.apk
