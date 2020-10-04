@@ -26,6 +26,7 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Ambiente221;
     public bool Ambiente222;
     public bool Ambiente311;
+    public bool AmbienteEND;
     public bool Play_Vaccum;
     public bool Stop_Vaccum;
     public bool Play_Kettle;
@@ -228,6 +229,15 @@ public class MusikAmbientManager : MonoBehaviour
             Ambiente6.setParameterByName("LivingRoom", 0);
             
             Ambiente311 = false;
+        }
+
+        if (AmbienteEND == true)
+        {
+            Ambiente6.setParameterByName("LivingRoom", 4);
+            Ambiente6.start();
+            Ambiente6.setParameterByName("LivingRoom", 4);
+            Ambiente5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            AmbienteEND = false;
         }
 
         if (Play_Vaccum == true)

@@ -5,8 +5,8 @@ ScriptsOnlyBuild:
     - FMODUnity.EditorEventRef
     - FMODUnity.EditorParamRef
     - FMODUnity.EventCache
+    - FMODUnity.SettingsEditor
     Assembly-CSharp-firstpass.dll:
-    - FMODUnity.RuntimeManager
     - FMODUnity.Settings
     - FMODUnity.StudioBankLoader
     - FMODUnity.StudioEventEmitter
@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - MusikAmbientManager
     - PauseAnimation
     - Pause_Menu
+    - ScriptUsageLoading
     - SoundManager
     - StartMessage
     - UnlockNextSubscene
@@ -119,8 +120,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12210}
-    - Class: 114
       Script: {instanceID: 12268}
     - Class: 114
       Script: {instanceID: 12374}
@@ -183,6 +182,55 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 331
+      Script: {instanceID: 0}
+    Assets/Scenes/LOADING.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11284}
+    - Class: 114
+      Script: {instanceID: 11606}
+    - Class: 114
+      Script: {instanceID: 12210}
+    - Class: 114
+      Script: {instanceID: 13930}
+    - Class: 114
+      Script: {instanceID: 23124}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -781,7 +829,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: 9ba836d4ff49d1ea6f54678d2ef0ebb0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KID_Interaction_3_2_1
@@ -869,7 +917,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ee731b3ae8c19143a1af9a87556b7f1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptUsageLoading
   platform: 13
   scenePathNames:
+  - Assets/Scenes/LOADING.unity
   - Assets/Scenes/DevScene.unity
   playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.16/OWS-0.16.apk
