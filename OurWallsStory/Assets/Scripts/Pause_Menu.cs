@@ -104,7 +104,7 @@ public class Pause_Menu : MonoBehaviour
 
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0;
         PauseActivated = true;
@@ -351,6 +351,14 @@ public class Pause_Menu : MonoBehaviour
             LightColor = new Color32(230, 250, 250, 255);
             SecondaryColor = new Color32(200, 160, 70, 255);
             SceneNumber = 19;
+        }
+
+        if ((Act == 5) && (Scene == 0) && (SubScene == 0))
+        {
+            DarkColor = new Color32(70, 90, 135, 255);
+            LightColor = new Color32(213, 255, 251, 255);
+            SecondaryColor = new Color32(100, 228, 160, 255);
+            SceneNumber = 20;
         }
 
 

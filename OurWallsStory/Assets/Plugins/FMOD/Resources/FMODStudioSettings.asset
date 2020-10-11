@@ -19,7 +19,7 @@ MonoBehaviour:
   sourceBankPath: FMODAssets
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 0
-  BankLoadType: 0
+  BankLoadType: 1
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
@@ -85,5 +85,7 @@ MonoBehaviour:
   Banks:
   - SBK_Music
   - SBK_SFX
-  BanksToLoad: []
+  BanksToLoad:
+  - Master.bank
+  - Master.strings.bank
   LiveUpdatePort: 9264

@@ -26,7 +26,7 @@ public class MusikAmbientManager : MonoBehaviour
     public bool Ambiente221;
     public bool Ambiente222;
     public bool Ambiente311;
-    public bool AmbienteEND;
+    public bool Play_AmbienteEND;
     public bool Play_Vaccum;
     public bool Stop_Vaccum;
     public bool Play_Kettle;
@@ -41,6 +41,7 @@ public class MusikAmbientManager : MonoBehaviour
     FMOD.Studio.EventInstance Ambiente4;
     FMOD.Studio.EventInstance Ambiente5;
     FMOD.Studio.EventInstance Ambiente6;
+    FMOD.Studio.EventInstance AmbienteEND;
     FMOD.Studio.EventInstance Music_Act2;
     FMOD.Studio.EventInstance Music_Act3;
     FMOD.Studio.EventInstance Water;
@@ -61,6 +62,7 @@ public class MusikAmbientManager : MonoBehaviour
         Ambiente4 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_Kitchen_LivingRoom");
         Ambiente5 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_Attic");
         Ambiente6 = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_LivingRoom");
+        AmbienteEND = FMODUnity.RuntimeManager.CreateInstance("event:/AMB/Amb_Rain");
         Water = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Action/SFX_WaterFaucet_On");
         Vaccum = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_VacuumCleaner");
         Kettle = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_Kettle");
@@ -231,13 +233,10 @@ public class MusikAmbientManager : MonoBehaviour
             Ambiente311 = false;
         }
 
-        if (AmbienteEND == true)
+        if (Play_AmbienteEND == true)
         {
-            Ambiente6.setParameterByName("LivingRoom", 4);
-            Ambiente6.start();
-            Ambiente6.setParameterByName("LivingRoom", 4);
-            Ambiente5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            AmbienteEND = false;
+            AmbienteEND.start();
+            Play_AmbienteEND = false;
         }
 
         if (Play_Vaccum == true)
@@ -272,6 +271,7 @@ public class MusikAmbientManager : MonoBehaviour
             Ambiente4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Ambiente5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Ambiente6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            AmbienteEND.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             ShutAllAmbientes = false;
         }
 
@@ -292,6 +292,7 @@ public class MusikAmbientManager : MonoBehaviour
         Ambiente4.setPaused(true);
         Ambiente5.setPaused(true);
         Ambiente6.setPaused(true);
+        AmbienteEND.setPaused(true);
         Water.setPaused(true);
         Vaccum.setPaused(true);
         Kettle.setPaused(true);
@@ -309,6 +310,7 @@ public class MusikAmbientManager : MonoBehaviour
         Ambiente4.setPaused(false);
         Ambiente5.setPaused(false);
         Ambiente6.setPaused(false);
+        AmbienteEND.setPaused(false);
         Water.setPaused(false);
         Vaccum.setPaused(false);
         Kettle.setPaused(false);
@@ -326,6 +328,7 @@ public class MusikAmbientManager : MonoBehaviour
         Ambiente4.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Ambiente5.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Ambiente6.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        AmbienteEND.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Water.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Vaccum.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Kettle.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);

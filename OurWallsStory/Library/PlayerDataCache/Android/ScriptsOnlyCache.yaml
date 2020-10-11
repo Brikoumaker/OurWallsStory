@@ -20,6 +20,7 @@ ScriptsOnlyBuild:
     - BR2_Interaction_3_1_2
     - BRD_interaction_3_2_2
     - BR_Interactions_1_2_1
+    - END_screen
     - KID_Interaction_3_2_1
     - KI_Interactions_1_3_1
     - KL_Interaction_2_1_2
@@ -144,21 +145,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13560}
     - Class: 114
-      Script: {instanceID: 13930}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 14330}
-    - Class: 114
-      Script: {instanceID: 14356}
+      Script: {instanceID: 14332}
     - Class: 114
       Script: {instanceID: 14358}
     - Class: 114
-      Script: {instanceID: 14502}
+      Script: {instanceID: 14360}
     - Class: 114
-      Script: {instanceID: 14586}
+      Script: {instanceID: 14504}
     - Class: 114
-      Script: {instanceID: 14598}
+      Script: {instanceID: 14588}
     - Class: 114
-      Script: {instanceID: 14670}
+      Script: {instanceID: 14600}
+    - Class: 114
+      Script: {instanceID: 14672}
+    - Class: 114
+      Script: {instanceID: 40812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -207,9 +210,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 13930}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 23124}
+      Script: {instanceID: 13932}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -253,7 +256,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 3ff600108ca818e92ebd80448dbba9e2
+      Hash: f3f4ed7330f84513f6a90e8904bf6e53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MusikAmbientManager
@@ -721,6 +724,12 @@ ScriptsOnlyBuild:
     className: BR_Interactions_1_2_1
   - hash:
       serializedVersion: 2
+      Hash: ee731b3ae8c19143a1af9a87556b7f1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptUsageLoading
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -919,12 +928,12 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: ee731b3ae8c19143a1af9a87556b7f1f
+      Hash: 42069d6b011c8cf24ee7dce0ab22e3ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ScriptUsageLoading
+    className: END_screen
   platform: 13
   scenePathNames:
   - Assets/Scenes/LOADING.unity
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/0.16/OWS-0.16.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.0/OWS-1.0.apk
