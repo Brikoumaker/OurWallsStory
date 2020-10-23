@@ -16,40 +16,54 @@ public class KI_Interactions_1_3_1 : MonoBehaviour
     private Animator House_Animator;
     private bool PauseActivated;
 
+    private Pause_Menu menuPause;
+
+    private Camera cam;
+
+    private int Magnet_Activated = Animator.StringToHash("Magnet_Activated");
+    private int Dishes_Activated = Animator.StringToHash("Dishes_Activated");
+
+    private Collider2D MagnetColl;
+    private Collider2D DishesColl;
+    private Collider2D WindowColl;
+
     // Start is called before the first frame update
     void Start()
     {
         Magnet_Animator = Magnet.GetComponent<Animator>();
         Dishes_Animator = Dishes.GetComponent<Animator>();
         House_Animator = House.GetComponent<Animator>();
+        menuPause = Canvas.GetComponent<Pause_Menu>();
+        cam = Camera.main;
+        MagnetColl = Magnet.GetComponent<Collider2D>();
+        DishesColl = Dishes.GetComponent<Collider2D>();
+        WindowColl = Window.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+        PauseActivated = menuPause.PauseActivated;
 
 
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
-            Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 CamPos = Camera.main.transform.position;
-            Collider2D MagnetColl = Magnet.GetComponent<Collider2D>();
-            Collider2D DishesColl = Dishes.GetComponent<Collider2D>();
-            Collider2D WindowColl = Window.GetComponent<Collider2D>();
+            Vector3 MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = cam.transform.position;
+            
 
             if (MagnetColl.OverlapPoint(MousePos))
             {
-                Magnet_Animator.SetBool("Magnet_Activated", true);
+                Magnet_Animator.SetBool(Magnet_Activated, true);
             }
 
-            if (DishesColl.OverlapPoint(MousePos))
+            else if (DishesColl.OverlapPoint(MousePos))
             {
-                Dishes_Animator.SetBool("Dishes_Activated", true);
+                Dishes_Animator.SetBool(Dishes_Activated, true);
             }
 
-            if (WindowColl.OverlapPoint(MousePos))
+            else if (WindowColl.OverlapPoint(MousePos))
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Glass", CamPos);
             }

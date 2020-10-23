@@ -49,6 +49,10 @@ public class MusikAmbientManager : MonoBehaviour
     FMOD.Studio.EventInstance Kettle;
     FMOD.Studio.EventInstance TV;
     FMOD.Studio.PLAYBACK_STATE state;
+    public bool MusicIsGood;
+    public bool AmbienteIsGood;
+    public bool Music2IsGood;
+    public bool AmbienteEndIsGood;
 
     // Start is called before the first frame update
     void Start()
@@ -67,23 +71,22 @@ public class MusikAmbientManager : MonoBehaviour
         Vaccum = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_VacuumCleaner");
         Kettle = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_Kettle");
         TV = FMODUnity.RuntimeManager.CreateInstance("event:/SFX_Animation/SFX_TVMusic");
-        
-        //
-    }
+
+
+    //
+}
 
     // Update is called once per frame
+    
     void Update()
     {
 
 
-        if (Play_Music_Act1 == true)
+        if (Play_Music_Act1 == true && MusicIsGood == false)
         {
             Music_Act1.start();
-            Music_Act1.getPlaybackState(out state);
-            if (state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
-            {
-                Play_Music_Act1 = false;
-            }
+            MusicIsGood = true;
+            Play_Music_Act1 = false;
             
         }
 
@@ -93,9 +96,10 @@ public class MusikAmbientManager : MonoBehaviour
             Play_Ambiente1 = false;
         }
 
-        if (Stop_Ambiente1 == true)
+        if (Stop_Ambiente1 == true && AmbienteIsGood == false)
         {
             Ambiente1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            AmbienteIsGood = true;
             Stop_Ambiente1 = false;
         }
 
@@ -139,12 +143,8 @@ public class MusikAmbientManager : MonoBehaviour
         {
             Music_Act2.setParameterByName("MusiqueActe2", 1);
             Music_Act2.start();
-            Music_Act2.getPlaybackState(out state);
-            if (state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
-            {
-                Play_Music_Act2_1 = false;
-            }
-            
+            Play_Music_Act2_1 = false;
+
         }
 
         if (Play_Music_Act2_2 == true)
@@ -171,16 +171,13 @@ public class MusikAmbientManager : MonoBehaviour
             Stop_Music_Act2 = false;
         }
 
-        if (Play_Music_Act3_1 == true)
+        if (Play_Music_Act3_1 == true && Music2IsGood == false)
         {
             Music_Act3.setParameterByName("MusiqueActe3", 0);
             Music_Act3.start();
-            Music_Act3.getPlaybackState(out state);
-            if (state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
-            {
-                Play_Music_Act3_1 = false;
-            }
-            
+            Music2IsGood = true;
+            Play_Music_Act3_1 = false;
+
         }
 
         if (Play_Music_Act3_2 == true)
@@ -233,10 +230,11 @@ public class MusikAmbientManager : MonoBehaviour
             Ambiente311 = false;
         }
 
-        if (Play_AmbienteEND == true)
+        if (Play_AmbienteEND == true && AmbienteEndIsGood == false)
         {
             AmbienteEND.start();
             Play_AmbienteEND = false;
+            AmbienteEndIsGood = true;
         }
 
         if (Play_Vaccum == true)

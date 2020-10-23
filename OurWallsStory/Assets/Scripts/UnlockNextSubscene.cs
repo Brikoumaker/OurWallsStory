@@ -13,11 +13,14 @@ public class UnlockNextSubscene : MonoBehaviour
     public bool BasseUpdate;
 
     private Animator House_Animator;
+    private MusikAmbientManager ambientManager;
 
     // Start is called before the first frame update
     void Start()
     {
         House_Animator = House.GetComponent<Animator>();
+        if (MusicAmbienteManager != null)
+            ambientManager = MusicAmbienteManager.GetComponent<MusikAmbientManager>();
     }
 
     // Update is called once per frame
@@ -26,7 +29,8 @@ public class UnlockNextSubscene : MonoBehaviour
 
         if (BasseUpdate == true)
         {
-            MusicAmbienteManager.GetComponent<MusikAmbientManager>().Basse = Interaction_Basse;
+            //if (ambientManager != null)
+                ambientManager.Basse = Interaction_Basse;
         }
     }
 

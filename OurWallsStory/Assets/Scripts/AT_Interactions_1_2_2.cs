@@ -21,6 +21,22 @@ public class AT_Interactions_1_2_2 : MonoBehaviour
     private Animator House_Animator;
     private bool PauseActivated;
 
+    private Pause_Menu menuPause;
+
+    private Camera cam;
+
+    private int SubScene = Animator.StringToHash("SubScene");
+    private int Scene = Animator.StringToHash("Scene");
+    private int Web1_Activated = Animator.StringToHash("Web1_Activated");
+    private int Web2_Activated = Animator.StringToHash("Web2_Activated");
+    private int Portrait_Activated = Animator.StringToHash("Portrait_Activated");
+    private int Mannikin_Activated = Animator.StringToHash("Mannikin_Activated");
+
+    private Collider2D Web1Coll;
+    private Collider2D Web2Coll;
+    private Collider2D PortraitColl;
+    private Collider2D MannikinColl;
+    private Collider2D WindowColl;
 
     // Start is called before the first frame update
     void Start()
@@ -30,51 +46,54 @@ public class AT_Interactions_1_2_2 : MonoBehaviour
         Portrait_Animator = Portrait.GetComponent<Animator>();
         Mannikin_Animator = Mannikin.GetComponent<Animator>();
         House_Animator = House.GetComponent<Animator>();
+        menuPause = Canvas.GetComponent<Pause_Menu>();
+        cam = Camera.main;
+        Web1Coll = Web1.GetComponent<Collider2D>();
+        Web2Coll = Web2.GetComponent<Collider2D>();
+        PortraitColl = Portrait.GetComponent<Collider2D>();
+        MannikinColl = Mannikin.GetComponent<Collider2D>();
+        WindowColl = Window.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+        PauseActivated = menuPause.PauseActivated;
 
 
         if (AnimationFinished == true)
         {
-            House_Animator.SetInteger("Scene", 3);   
-            House_Animator.SetInteger("SubScene", 1);
+            House_Animator.SetInteger(Scene, 3);   
+            House_Animator.SetInteger(SubScene, 1);
         }
 
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
-            Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 CamPos = Camera.main.transform.position;
-            Collider2D Web1Coll = Web1.GetComponent<Collider2D>();
-            Collider2D Web2Coll = Web2.GetComponent<Collider2D>();
-            Collider2D PortraitColl = Portrait.GetComponent<Collider2D>();
-            Collider2D MannikinColl = Mannikin.GetComponent<Collider2D>();
-            Collider2D WindowColl = Window.GetComponent<Collider2D>();
+            Vector3 MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = cam.transform.position;
+            
 
             if (Web1Coll.OverlapPoint(MousePos))
             {
-                Web1_Animator.SetBool("Web1_Activated", true);
+                Web1_Animator.SetBool(Web1_Activated, true);
             }
 
-            if (Web2Coll.OverlapPoint(MousePos))
+            else if (Web2Coll.OverlapPoint(MousePos))
             {
-                Web2_Animator.SetBool("Web2_Activated", true);
+                Web2_Animator.SetBool(Web2_Activated, true);
             }
 
-            if (PortraitColl.OverlapPoint(MousePos))
+            else if (PortraitColl.OverlapPoint(MousePos))
             {
-                Portrait_Animator.SetBool("Portrait_Activated", true);
+                Portrait_Animator.SetBool(Portrait_Activated, true);
             }
 
-            if (MannikinColl.OverlapPoint(MousePos))
+            else if (MannikinColl.OverlapPoint(MousePos))
             {
-                Mannikin_Animator.SetBool("Mannikin_Activated", true);
+                Mannikin_Animator.SetBool(Mannikin_Activated, true);
             }
 
-            if (WindowColl.OverlapPoint(MousePos))
+            else if (WindowColl.OverlapPoint(MousePos))
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Glass", CamPos);
             }

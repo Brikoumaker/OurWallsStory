@@ -6,17 +6,18 @@ public class SoundManager : MonoBehaviour
 {
     public GameObject MusicAmbienteManager;
     Vector3 CamPos;
+    private Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CamPos = Camera.main.transform.position;
+        CamPos = cam.transform.position;
     }
 
     void SparklesSound()

@@ -26,7 +26,7 @@ class ScriptUsageLoading : MonoBehaviour
     public List<string> Banks;
 
     // The name of the scene to load and switch to
-    public string Scene = null;
+    public string Scene;
 
     public void Start()
     {
@@ -41,6 +41,7 @@ class ScriptUsageLoading : MonoBehaviour
     IEnumerator LoadGameAsync()
     {
         // Start an asynchronous operation to load the scene
+        
         AsyncOperation async = SceneManager.LoadSceneAsync(Scene);
 
         // Don't lead the scene start until all Studio Banks have finished loading

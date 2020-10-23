@@ -5,7 +5,6 @@ ScriptsOnlyBuild:
     - FMODUnity.EditorEventRef
     - FMODUnity.EditorParamRef
     - FMODUnity.EventCache
-    - FMODUnity.SettingsEditor
     Assembly-CSharp-firstpass.dll:
     - FMODUnity.Settings
     - FMODUnity.StudioBankLoader
@@ -129,39 +128,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12870}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 13144}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13146}
     - Class: 114
-      Script: {instanceID: 13396}
+      Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13398}
     - Class: 114
       Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13560}
+      Script: {instanceID: 13444}
     - Class: 114
-      Script: {instanceID: 13932}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 14332}
+      Script: {instanceID: 13934}
     - Class: 114
-      Script: {instanceID: 14358}
+      Script: {instanceID: 14334}
     - Class: 114
       Script: {instanceID: 14360}
     - Class: 114
-      Script: {instanceID: 14504}
+      Script: {instanceID: 14362}
     - Class: 114
-      Script: {instanceID: 14588}
+      Script: {instanceID: 14506}
     - Class: 114
-      Script: {instanceID: 14600}
+      Script: {instanceID: 14590}
     - Class: 114
-      Script: {instanceID: 14672}
+      Script: {instanceID: 14602}
     - Class: 114
-      Script: {instanceID: 40812}
+      Script: {instanceID: 14674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,9 +209,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 13570}
+      Script: {instanceID: 13572}
     - Class: 114
-      Script: {instanceID: 13932}
+      Script: {instanceID: 13934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -256,7 +255,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: f3f4ed7330f84513f6a90e8904bf6e53
+      Hash: 799a00b0aa0222ccd4429a1a9a502248
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MusikAmbientManager
@@ -598,6 +597,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 42069d6b011c8cf24ee7dce0ab22e3ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: END_screen
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -926,14 +931,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 42069d6b011c8cf24ee7dce0ab22e3ad
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: END_screen
   platform: 13
   scenePathNames:
   - Assets/Scenes/LOADING.unity
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.0/OWS-1.0.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.1/OWS-1.1.apk

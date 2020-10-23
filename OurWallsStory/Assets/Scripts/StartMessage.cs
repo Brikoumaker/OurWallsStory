@@ -7,11 +7,12 @@ public class StartMessage : MonoBehaviour
 
     public bool AnimationFinished;
     public GameObject SubScene1_1_1;
+    private LR_Interactions_1_1_1 interaction;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        interaction = SubScene1_1_1.GetComponent<LR_Interactions_1_1_1>();
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class StartMessage : MonoBehaviour
     {
         if (AnimationFinished == true)
         {
-            SubScene1_1_1.GetComponent<LR_Interactions_1_1_1>().StartGame = true;
+            interaction.StartGame = true;
         }
     }
 }

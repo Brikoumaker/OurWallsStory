@@ -21,6 +21,22 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
     private Animator House_Animator;
     private bool PauseActivated;
 
+    private Pause_Menu menuPause;
+
+    private Camera cam;
+
+    private int SubScene = Animator.StringToHash("SubScene");
+    private int LampNight_Activated = Animator.StringToHash("LampNight_Activated");
+    private int Candle_Activated = Animator.StringToHash("Candle_Activated");
+    private int TVLight_Activated = Animator.StringToHash("TVLight_Activated");
+
+    private Collider2D LampNightColl;
+    private Collider2D CandleColl;
+    private Collider2D TVLightColl;
+    private Collider2D CurtainColl;
+    private Collider2D StairsColl;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +44,13 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
         Candle_Animator = Candle.GetComponent<Animator>();
         TVLight_Animator = TVLight.GetComponent<Animator>();
         House_Animator = House.GetComponent<Animator>();
+        menuPause = Canvas.GetComponent<Pause_Menu>();
+        cam = Camera.main;
+        LampNightColl = LampNight.GetComponent<Collider2D>();
+        CandleColl = Candle.GetComponent<Collider2D>();
+        TVLightColl = TVLight.GetComponent<Collider2D>();
+        CurtainColl = Curtain.GetComponent<Collider2D>();
+        StairsColl = Stairs.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -35,46 +58,42 @@ public class LR3_Interactions_1_3_2 : MonoBehaviour
 
     {
 
-        PauseActivated = Canvas.GetComponent<Pause_Menu>().PauseActivated;
+        PauseActivated = menuPause.PauseActivated;
 
         if (AnimationFinished == true)
         {  
-            House_Animator.SetInteger("SubScene", 3);
+            House_Animator.SetInteger(SubScene, 3);
         }
 
         if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
         {
-            Vector3 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 CamPos = Camera.main.transform.position;
-            Collider2D LampNightColl = LampNight.GetComponent<Collider2D>();
-            Collider2D CandleColl = Candle.GetComponent<Collider2D>();
-            Collider2D TVLightColl = TVLight.GetComponent<Collider2D>();
-            Collider2D CurtainColl = Curtain.GetComponent<Collider2D>();
-            Collider2D StairsColl = Stairs.GetComponent<Collider2D>();
+            Vector3 MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 CamPos = cam.transform.position;
+            
 
             if (LampNightColl.OverlapPoint(MousePos))
             {
-                LampNight_Animator.SetBool("LampNight_Activated", true);
+                LampNight_Animator.SetBool(LampNight_Activated, true);
                 DarkRoom.SetActive(true);
             }
 
-            if (CandleColl.OverlapPoint(MousePos))
+            else if (CandleColl.OverlapPoint(MousePos))
             {
-                Candle_Animator.SetBool("Candle_Activated", true);
+                Candle_Animator.SetBool(Candle_Activated, true);
             }
 
-            if (TVLightColl.OverlapPoint(MousePos))
+            else if (TVLightColl.OverlapPoint(MousePos))
             {
-                TVLight_Animator.SetBool("TVLight_Activated", true);
+                TVLight_Animator.SetBool(TVLight_Activated, true);
                 
             }
 
-            if (CurtainColl.OverlapPoint(MousePos))
+            else if (CurtainColl.OverlapPoint(MousePos))
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Curtains_Touch", CamPos);
             }
 
-            if (StairsColl.OverlapPoint(MousePos))
+            else if (StairsColl.OverlapPoint(MousePos))
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Touch/SFX_Stairs_Touch", CamPos);
             }

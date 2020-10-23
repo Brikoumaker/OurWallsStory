@@ -55,6 +55,11 @@ public class Pause_Menu : MonoBehaviour
     private int SubScene;
     private int Act2SubScene;
 
+    private Camera cam;
+
+    private PauseAnimation animationPause;
+    private MusikAmbientManager ambientManager;
+
     Vector3 CamPos;
 
     // Start is called before the first frame update
@@ -67,6 +72,9 @@ public class Pause_Menu : MonoBehaviour
         No.GetComponent<Button>().onClick.AddListener(ClickNo);
         PauseMenu_Animator = PauseMenu.GetComponent<Animator>();
         House_Animator = House.GetComponent<Animator>();
+        cam = Camera.main;
+        animationPause = PauseMenu.GetComponent<PauseAnimation>();
+        ambientManager = MusicAmbienteManager.GetComponent<MusikAmbientManager>();
     }
 
     // Update is called once per frame
@@ -74,8 +82,8 @@ public class Pause_Menu : MonoBehaviour
 
     {
 
-        AnimationFinished = PauseMenu.GetComponent<PauseAnimation>().AnimationFinished;
-        Vector3 CamPos = Camera.main.transform.position;
+        AnimationFinished = animationPause.AnimationFinished;
+        Vector3 CamPos = cam.transform.position;
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -98,7 +106,7 @@ public class Pause_Menu : MonoBehaviour
         if ((State == 5) && (AnimationFinished == true))
         {
             Time.timeScale = 1;
-            MusicAmbienteManager.GetComponent<MusikAmbientManager>().StopAllPlayerEvents();
+            ambientManager.StopAllPlayerEvents();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
@@ -110,7 +118,7 @@ public class Pause_Menu : MonoBehaviour
         PauseActivated = true;
         UI_Update();
         PauseMenu.SetActive(true);
-        MusicAmbienteManager.GetComponent<MusikAmbientManager>().Pause();
+        ambientManager.Pause();
         State = 1;
         PauseMenu_Animator.SetInteger("PauseMenu_State", 1);
     }
@@ -118,7 +126,7 @@ public class Pause_Menu : MonoBehaviour
     void ResumeGame ()
     {
         Time.timeScale = 1;
-        MusicAmbienteManager.GetComponent<MusikAmbientManager>().Resume();
+        ambientManager.Resume();
         PauseActivated = false;
         PauseMenu.SetActive(false);
     }
