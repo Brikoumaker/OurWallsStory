@@ -29,6 +29,8 @@ public class LR4_Interaction_3_2_3 : MonoBehaviour
 
     private int Holding = Animator.StringToHash("Holding");
 
+    public bool Credits;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +66,7 @@ public class LR4_Interaction_3_2_3 : MonoBehaviour
             Interaction_Animator.SetBool(Holding, false);
         }
 
-        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false))
+        if ((Input.GetMouseButtonDown(0)) && (PauseActivated == false) && (Credits == false))
         {
             Vector3 MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             Vector3 CamPos = cam.transform.position;
@@ -96,4 +98,5 @@ public class LR4_Interaction_3_2_3 : MonoBehaviour
 
         }
     }
+
 }

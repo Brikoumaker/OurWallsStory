@@ -48,10 +48,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -255,7 +253,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 799a00b0aa0222ccd4429a1a9a502248
+      Hash: 9eaf514f8bf72719a0fb99b10cb8b7db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MusikAmbientManager
@@ -339,7 +337,7 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: bc9203e8f5087924e9cb7ea0ca21223c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LR4_Interaction_3_2_3
@@ -423,7 +421,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: 728a7016b1a2f17e6a4bacb3a3183bed
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BB_Interaction_2_1_1
@@ -549,7 +547,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: b205b85cccba6bdb67bd827ea27c48b2
+      Hash: a30bb9a9bd3e93e2829419d5f606d633
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BE_Interactions_1_3_3
@@ -597,7 +595,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 42069d6b011c8cf24ee7dce0ab22e3ad
+      Hash: 3b15b1f056cc0fcc049c8b02357e831b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: END_screen
@@ -627,7 +625,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: c5bb78fdf1ef1d9dc9bf149f5bb34a22
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AT2_Interaction_2_2_1
@@ -651,7 +649,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: f5162893ff2c956aeda4e2275c6464bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BRD_interaction_3_2_2
@@ -675,7 +673,7 @@ ScriptsOnlyBuild:
     className: SoundManager
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: b53013f4eb31011c208ee20df3fdc611
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BR2_Interaction_3_1_2
@@ -723,7 +721,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: fbe424d28ffca091d9fc8a76b74d72e6
+      Hash: a6906513a892410f59b703ce54838a26
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BR_Interactions_1_2_1
@@ -843,7 +841,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 9ba836d4ff49d1ea6f54678d2ef0ebb0
+      Hash: a7be847446d5d7eb5f57f1d32e84e599
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KID_Interaction_3_2_1
@@ -921,7 +919,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 75d8e22f91af69cdb01b5082153dc48e
+      Hash: da350d9611a7d69b80a0486598447ae4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KL_Interaction_2_1_2
@@ -935,4 +933,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/LOADING.unity
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.1/OWS-1.1.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.2/OWS-1.2.apk
