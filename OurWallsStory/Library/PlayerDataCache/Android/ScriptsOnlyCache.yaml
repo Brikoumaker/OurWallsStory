@@ -337,7 +337,7 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: bc9203e8f5087924e9cb7ea0ca21223c
+      Hash: cc18a4bb96eaab6eab3f27ebb04cc3b6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LR4_Interaction_3_2_3
@@ -933,4 +933,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/LOADING.unity
   - Assets/Scenes/DevScene.unity
-  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.2/OWS-1.2.apk
+  playerPath: C:/Users/morea/OneDrive/Documents/OWS-Builds/1.21/OWS-1.21.apk
